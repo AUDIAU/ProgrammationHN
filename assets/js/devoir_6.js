@@ -1,9 +1,3 @@
-//dessiner le cadre pour pouvoir en récupérer ensuite les donner.
-focus ; blur ; change ; submit
-
-//récuperer les données du cadre si le bouton "analyser le poème" est déclenché. element, bottom, if.
-document.getElementById(poeme_recu)
-
 //création des fonctions :
 //fonction pour indiquer les 10 mots les plus fréquents du poème (sans titre) :
 function frequenceMots(poeme) {
