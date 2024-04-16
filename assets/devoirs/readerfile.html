@@ -46,7 +46,7 @@
                     <br />
                     <br />
                     <button class="submit" id="segmentButton" onclick="segmentation_mots()"><span>Segmentation</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
+                    <button class="submit" id="cooccurrence" onclick="calculaffichagecooccurrences()"><span>Cooccurrents/fréquence</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
@@ -58,19 +58,7 @@
             <br />
             <div id="Global">
                 <div id="fileDisplayArea"></div>
-                <div id="page_analysis">
-                    <h1>Tableau des mots par longueur</h1>
-                    <table id="tableau_mots">
-                        <thead>
-                            <tr>
-                                <th>Longueur du mot</th>
-                                <th>Mots</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableau_body">
-                        </tbody>
-                    </table>
-                </div>
+                <div id="page_analysis"></div>
             </div>
         </div>
     </div>
