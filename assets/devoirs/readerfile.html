@@ -42,16 +42,13 @@
                     </small>
                     <br />
                     <br />
-                    <button onclick="alert('bonjour');"><span>Bonjour</span></button>
+                    <button onclick="alert('Bonjour ! Bienvenue sur ma page ! J\'espère qu\'elle fonctionnera correctement.');"><span>Bonjour</span></button>
                     <br />
                     <br />
                     <button class="submit" id="segmentButton" onclick="segmentation_mots()"><span>Segmentation</span></button>
                     <button class="submit" id="cooccurrence" onclick="calculaffichagecooccurrences()"><span>Cooccurrents/fréquence</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+                    <button class="submit" id="graphique" onclick="createBarChart()"><span>Visualisation Cooccurrents</span></button>
+                    <button class="submit" id="toggleHelp" onclick="aide()"><span>Aide</span></button>
                 </p>
             </div>
             <div id="logger" style="width:100%"></div>
@@ -63,5 +60,6 @@
         </div>
     </div>
     <script type="text/javascript" language="javascript" src="/assets/js/code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
