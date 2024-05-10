@@ -208,3 +208,58 @@ function calculaffichagecooccurrences() {
     // Affichage tableau dans "page-analysis" doc html.
     document.getElementById('page_analysis').innerHTML = HTMLtableau;
 }
+
+//Tâche numéro 3 :
+
+function aide (){
+const toggleButton = document.getElementById('toggleHelp');
+const helpSection = document.getElementById('helpSection');
+var aide = null;
+toggleButton.addEventListener('click', () => {
+    if (helpSection.style.display === 'none') {
+        helpSection.style.display = 'block';
+        aide += '<p>Ceci est l\'aide pour utiliser cette page.</p><p>Le bouton Segmentation permet de lancer la segmentation dans le fichier que vous avez télécharger sur cette page.</p><p>Le bouton Cooccurents/fréquence permet de chercher les cooccurences et leurs fréquences dans votre texte.</p><p>Le bouton Visualisation Cooccurents permet d\'afficher un graphique montrant les résultats du bouton Cooccurents/fréquence.</p>';
+        document.getElementById('helpSection').innerHTML = aide ;
+    } else {
+        helpSection.style.display = 'none';
+    }
+});
+}
+
+
+
+
+function createBarChart(cooccurrences) {
+    var labels = [];
+    var data = [];
+    for (var cooccurrence in cooccurrences) {
+        labels.push(cooccurrence);
+        data.push(cooccurrences[cooccurrence].cofrequence);
+    }
+
+    var ctx = document.getElementById('barChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Co-fréquence',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Utilisation de la fonction createBarChart avec les données de cooccurrences
+var cooccurrences = HTMLtableau;
+createBarChart(cooccurrences);
